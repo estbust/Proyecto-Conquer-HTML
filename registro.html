@@ -9,9 +9,9 @@
   <meta name="description" content="Regístrate en Conquer Blocks y comienza tu aprendizaje en desarrollo web full stack. Crea tu cuenta y accede a cursos interactivos de HTML, CSS, JavaScript y más.">
     <meta name="keywords" content="Desarrollo Web, Fullstack, HTML, CSS, JavaScript, React, Node, Express">
 
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
+    <link rel="icon" href="icono.png" sizes="any" type="image/png">
+    <link rel="icon" href="icono.png" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icono.png">
 
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
@@ -35,19 +35,38 @@
     </nav>
   </header>
     <main>
-        <section>
-        <h1>Academia Conquerblocks</h1>
-        <p>Conquer Blocks es una plataforma online para aprender desarrollo web full stack. Explora cursos interactivos y mejora tus habilidades en HTML, CSS, JavaScript y más.</p>
-        </section>
-        <section>
-        <h2>¿Por qué Conquerblocks?</h2>
-        <p>Conquer Blocks es una plataforma online para aprender desarrollo web full stack. Explora cursos interactivos y mejora tus habilidades en HTML, CSS, JavaScript y más.</p>
-        </section>
-        <section>
-        <h2>¿Qué aprenderás?</h2>
-        <p>Conquer Blocks es una plataforma online para aprender desarrollo web full stack. Explora cursos interactivos y mejora tus habilidades en HTML, CSS, JavaScript y más.</p>
-        </section>
+        <h1>¡Registrate con nosotros!</h1>
+        <div class="container">
+          <p>Regístrate en Conquer Blocks y comienza tu aprendizaje en desarrollo web full stack. Crea tu cuenta y accede a cursos interactivos de HTML, CSS, JavaScript y más.</p>
+          <p>¡Regístrate ahora y comienza tu aprendizaje en desarrollo web!</p>
+          <p>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a></p>
+          <hr>
+          <h2>Registro</h2>
+          <form action="procesar_registro.php" method="POST">
+              <label for="name">Nombre completo:</label>
+              <input type="text" id="name" name="name" required><br><br>
+  
+              <label for="email">Correo electrónico:</label>
+              <input type="email" id="email" name="email" required><br><br>
+  
+              <label for="password">Contraseña:</label>
+              <input type="password" id="password" name="password" required><br><br>
+  
+              <label for="confirm_password">Confirmar contraseña:</label>
+              <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+  
+              <label for="course">Selecciona un curso:</label>
+              <select id="course" name="course" required>
+                  <option value="">-- Selecciona un curso --</option>
+                  <option value="html-css">HTML y CSS</option>
+                  <option value="javascript">JavaScript</option>
+              </select><br><br>
+  
+              <button type="submit">Registrarse</button>
+          </form>
+      </div>
     </main>
+
     <footer>
       <p>Academia Conquerblocks &copy; 2025 - <a href="aviso-legal.html">Aviso Legal</a></p>
     </footer>

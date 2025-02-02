@@ -10,9 +10,9 @@
 
     <meta name="keywords" content="Desarrollo Web, Fullstack, HTML, CSS, JavaScript, React, Node, Express">
 
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
+    <link rel="icon" href="icono.png" sizes="any" type="image/png">
+    <link rel="icon" href="icono.png" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icono.png">
 
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
@@ -36,19 +36,43 @@
     </nav>
   </header>
     <main>
-        <section>
-        <h1>Academia Conquerblocks</h1>
-        <p>Conquer Blocks es una plataforma online para aprender desarrollo web full stack. Explora cursos interactivos y mejora tus habilidades en HTML, CSS, JavaScript y más.</p>
-        </section>
-        <section>
-        <h2>¿Por qué Conquerblocks?</h2>
-        <p>Conquer Blocks es una plataforma online para aprender desarrollo web full stack. Explora cursos interactivos y mejora tus habilidades en HTML, CSS, JavaScript y más.</p>
-        </section>
-        <section>
-        <h2>¿Qué aprenderás?</h2>
-        <p>Conquer Blocks es una plataforma online para aprender desarrollo web full stack. Explora cursos interactivos y mejora tus habilidades en HTML, CSS, JavaScript y más.</p>
-        </section>
+      <div class="container">
+        <h1>Inicia sesión</h1>
+        <p>Accede a tu cuenta en Conquer Blocks y continúa tu aprendizaje en desarrollo web full stack. Inicia sesión y sigue avanzando con nuestros cursos interactivos.</p>
+        <p>¿No tienes una cuenta? <a href="registro.html">Regístrate</a></p>
+        <hr>
+        <h2>Iniciar sesión</h2>
+        <form id="loginForm" action="procesar_login.php" method="POST">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+
+            <p id="error-message" class="error">Por favor, completa todos los campos.</p>
+
+            <button type="submit">Iniciar Sesión</button>
+
+        </form>
+    </div>
+
+    <script>
+        // Validación básica antes de enviar el formulario
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let errorMessage = document.getElementById("error-message");
+
+            if (email === "" || password === "") {
+                errorMessage.style.display = "block";
+                event.preventDefault(); // Evita el envío del formulario
+            } else {
+                errorMessage.style.display = "none";
+            }
+        });
+    </script>
     </main>
+
     <footer>
       <p>Academia Conquerblocks &copy; 2025 - <a href="aviso-legal.html">Aviso Legal</a></p>
     </footer>
